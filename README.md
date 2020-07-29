@@ -1,14 +1,10 @@
 # NewDiscordBridge
-<p align="center">
-	<a href="https://discord.gg/myapppE">
-    		<img src="https://img.shields.io/discord/565583751665549344?color=%237289da&label=Discord" />
- 	</a>
-	<br/><br/>
-  	<a href="https://github.com/Mortmael/NewDiscordBridge/blob/master/README_ru.md">Русский</a>
-</p>
 
 NewDiscordBridge is a new plugin that will allow you not only to exchange messages with a chat on your server, but also
 moderate directly from discord!
+
+This is a modified fork of the original repo <https://github.com/Mortmael/NewDiscordBridge>. This fork adds new config options
+for better customization and control of the Discord Bot account.
 
 Supports: [Original TShock](https://github.com/Pryaxis/TShock), [Mobile TShock](https://github.com/Fe7n/TShockMobile)
 
