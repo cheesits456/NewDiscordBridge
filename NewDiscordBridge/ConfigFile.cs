@@ -16,9 +16,11 @@ namespace Terraria4PDA.DiscordBridge
         public ulong ChatID = 0;
         public ulong LogID = 0;
         public ulong JoinLogID = 0;
+        public string Playing = "Playing status here";
 
 
         public bool Chat = true;
+        public bool AllowBots = false;
         public bool Commands = true;
 
 

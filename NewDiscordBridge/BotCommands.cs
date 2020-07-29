@@ -17,7 +17,7 @@ using TShockAPI.DB;
 
 namespace Terraria4PDA.DiscordBridge
 {
-    public class BotCommands
+    public class BotCommands : BaseCommandModule
     {
         [Command("who")]
         [Description("Displays a list of players")]

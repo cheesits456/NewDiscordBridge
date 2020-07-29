@@ -69,13 +69,16 @@ namespace Terraria4PDA.DiscordBridge
                     UseInternalLogHandler = true,
                     LogLevel = LogLevel.Warning
                 });
-                await DiscordBot.ConnectAsync();
+                await DiscordBot.ConnectAsync(Config.Playing != "Playing status here" ? new DiscordActivity(Config.Playing, ActivityType.Playing) : null, UserStatus.Online);
 
                 if (Config.Commands)
                 {
                     var ccfg = new CommandsNextConfiguration
                     {
-                        StringPrefix = Config.Prefix,
+                        StringPrefixes = new[]
+                        {
+                            Config.Prefix
+                        },
 
                         EnableDms = false,
 
@@ -125,7 +128,7 @@ namespace Terraria4PDA.DiscordBridge
 
 
         public static DiscordClient DiscordBot { get; set; }
-        public CommandsNextModule DiscordCommands { get; set; }
+        public CommandsNextExtension DiscordCommands { get; set; }
         public static ConfigFile Config = new ConfigFile();
         //public ClanManager ClanManager = new ClanManager();
 
@@ -204,7 +207,9 @@ namespace Terraria4PDA.DiscordBridge
         {
             if (e.Channel.Id != Config.ChatID)
                 return;
-            if (e.Author == DiscordBot.CurrentUser || e.Author.IsBot)
+            if (e.Author == DiscordBot.CurrentUser)
+                return;
+            if (e.Author.IsBot && !Config.AllowBots)
                 return;
 
             TShock.Utils.Broadcast(string.Format(Config.DiscordToTerrariaFormat, e.Author.Username, e.Message.Content), Color);

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using DSharpPlus;
+using DSharpPlus.Entities;
 
 using Terraria;
 
@@ -34,7 +35,7 @@ namespace Terraria4PDA.DiscordBridge
                 LogLevel = LogLevel.Warning
             });
 
-            await Discord.DiscordBot.ConnectAsync();
+            await Discord.DiscordBot.ConnectAsync(Discord.Config.Playing != "Playing status here" ? new DiscordActivity(Discord.Config.Playing, ActivityType.Playing) : null, UserStatus.Online);
         }
 
         public static async void OnPostInitialize(EventArgs args)
