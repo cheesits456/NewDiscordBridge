@@ -26,7 +26,9 @@ Name | Description | Type
 -----| ------------|------
 DiscordBotToken | Insert the token for your bot from the [Developer Portal](https://discord.com/developers/) here | String
 Prefix | Prefix for your commands, e. g. "/", or "bot-" | String
+Playing | "Playing" status for Discord Bot | String
 Chat | Enable if you need chat between server and discord | Boolean
+AllowBots | Whether or not bot messages should send to the Terraria server | Boolean
 Commands | Enable if you need commands | Boolean
 ChatID | ID of channel for chat | UInt64
 LogID | ID of channel for logs | UInt64
