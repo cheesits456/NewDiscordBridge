@@ -19,7 +19,7 @@ Supports: [Original TShock](https://github.com/Pryaxis/TShock), [Mobile TShock](
 
 ## Config (NewDiscordBridge.json)
 Name | Description | Type
------| ------------|------
+:----|:------------|:----
 DiscordBotToken | Insert the token for your bot from the [Developer Portal](https://discord.com/developers/) here | String
 Prefix | Prefix for your commands, e. g. "/", or "bot-" | String
 Playing | "Playing" status for Discord Bot | String
