@@ -1,3 +1,4 @@
+
 # NewDiscordBridge
 
 NewDiscordBridge is a new plugin that will allow you not only to exchange messages with a chat on your server, but also
