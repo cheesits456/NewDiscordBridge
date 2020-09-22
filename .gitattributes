@@ -5,5 +5,3 @@
 
 * linguist-vendored
 NewDiscordBridge/ConfigFile.cs linguist-vendored=false
-NewDiscordBridge/Discord.cs linguist-vendored=false
-NewDiscordBridge/Utils.cs linguist-vendored=false
